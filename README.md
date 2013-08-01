@@ -34,6 +34,6 @@ Some resources on the protocols:
 * https://github.com/denis-beurive/GoStun/blob/master/src/stun/doc.go
 * http://www.webrtc.org/reference/architecture
 
-
+Please contibute by sending pull requests for ideas or research, or better yet, CODE! :D
 
 
