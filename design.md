@@ -16,24 +16,12 @@ username and password to database like MySQL.
 
 It supports several operations. (This is a draft protocol. We might revise it
 accordingly.)
-###### Registration
-Client sends "REG username password", receives "OK" or "ERROR".
-
-###### Login
-Client sends "LOGIN username password, receives "SUCCESS" or "FAIL".
-
-###### Change username
-Client sends "SET PASSWORD username old-password new-password", receives "OK"
-or "FAIL".
 
 ###### Update NAT punching information
-Client sends "UPDATE IPPORT ip port", receives "OK".
-
-###### Update NAT information timeout
-Client sends "UPDATE TIMEOUT timeout", receives "OK".
+Client sends `http://localhost:7446/set/?token=${TOKEN}&&host=${HOST}&&timeout=${TIMEOUT}`, receives "OK".
 
 ###### Request other server's IP and port
-Client sends "GET IPPORT username", receives "ip, port".
+Client sends `http://localhost:7446/get/?token=${TOKEN}&&uid=${UID}`, receives a json object with uid, host, and timeout.
 
 ### WebRTC Client
 We need to implement the protocol stack of WebRTC.
